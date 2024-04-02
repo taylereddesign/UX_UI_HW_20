@@ -73,6 +73,8 @@
     justify-content: space-between;
     position: sticky;
     background-color: #000;
+    top: 0;
+    z-index: 2;
 
     
 
@@ -92,6 +94,13 @@
 div{
     display: block;
     unicode-bidi: isolate;
+
+} */
+
+.c-project_holder{
+    display: flex;
+    Flex-direction: row;
+
 
 }
 
@@ -189,6 +198,19 @@ div{
     align-items: center;
 }
 */
+
+.scrim.is--hidden{
+    display: none;
+
+}
+
+.scrim{
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
 .c-container_holder{
     display: flex;
     width: 100%;
@@ -201,6 +223,15 @@ div{
 
 }
 
+.c-container.is--project{
+    width: 100%;
+}
+.c-main_body.is--project{
+    padding-right: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
 
 .c-wrapper{
     width:100%;
@@ -225,6 +256,35 @@ div{
     align-self: center;
 }
 
+.c-margin.is--92_top_bottom.is--project{
+    width: 60%;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 0;
+}
+
+.c-image-holder{
+    display: flex;
+    align-self: stretch;
+}
+
+.c-image-holder.is--project-hero{
+    width:45%;
+    align-items: center;
+}
+
+.c-image_frame{
+    padding: 16px;
+    border: .75px thickness solid black;
+    background-color: whitesmoke;
+    box-shadow: 6px 6px 0 0 grey;
+    flex: none;
+}
+
+image{
+    width: 100%;
+}
+
 .card{
     display: inline-flex;
     flex-direction: row;
@@ -238,6 +298,7 @@ div{
 
 .body{
     position: relative;
+    min-height: 100%;
 
 }
 

@@ -1,14 +1,43 @@
-.navbar-toggler{
+.navbar-toggler {
     display:flex;
 }
 
-.a-body-button{
+.a-body-button {
     font-family: var(--sans-serif);
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
-    color:#000;
+    color: #f5f5f5;
+    /*
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px ;
+    padding-top: 4px;
+    padding-bottom: 4px; */
+    display: inline-block;  
+    justify-content: space-between;
+    margin-right: 1;
+ 
+
     
+}
+/* I'd like to make sure that the arrows are within the button containers...but 
+i'm not sure what to target within the .a-body-button  (margin/width/padding?) to make sure 
+they aren't too far apart...and that the two buttons remain inline
+
+i added below the .buttonContainer in html but doesn't seem quite right
+
+do they need serparate named containers?*/
+
+.buttonContainer{
+    background-color: #3A3838;
+    display: inline-block;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px ;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 1;
 }
 
 
@@ -19,7 +48,7 @@
 .arrow-right,
 .arrow-left,
 .long-arrow-right,
-.long-arrow-left{
+.long-arrow-left {
   display: block;
   margin: 30px auto;
   width: 25px;
@@ -28,16 +57,16 @@
   border-left: 6px solid #000;
 }   
 .arrow-right,
-.long-arrow-right{
+.long-arrow-right {
  transform: rotate(135deg);
 }
 
 .arrow-left,
-.long-arrow-left{
+.long-arrow-left {
  transform: rotate(-45deg);
 }
 .long-arrow-right::after,
-.long-arrow-left::after{
+.long-arrow-left::after {
   content: "";
   display: block;
   width: 6px;
@@ -79,47 +108,45 @@
     
 
 }
-.navbar-brand{
+.navbar-brand {
     color: whitesmoke;
     padding-left: 36px;
 }
 
 
-.navbar-toggler{
+.navbar-toggler {
     font-size: 16px;
     text-decoration: none;
     
 }
 
-div{
+div {
     display: block;
     unicode-bidi: isolate;
 
-} */
+} 
 
-.c-project_holder{
+.c-project_holder {
     display: flex;
     Flex-direction: row;
 
 
 }
 
-.sidenav{
+#sidenavigation {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     width: 18vw;
     height: 100%;
-    position: sticky;
+    position: fixed;
     z-index: 8;
-    top:52px;
-    left:10px;
     background:#eee;
     overflow-x: hidden;
-    padding: var(64px) var(16px);
+    padding: 32px 16px;
 }
 
-.sidenav a{
+.sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     display: block;
@@ -131,26 +158,19 @@ div{
     color: #ee2a61;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
 
-.table-list{
-    padding-left: 18px;
 
-}
 
-.c-header-h5{
+.c-header-h5 {
     color: grey;
     text-transform: uppercase;
     font-size: 12px;
     display: flex;
     padding-left: 8px;
-    margin-top: 64px;
+
 }
 
-.c-divider{
+.c-divider {
     height: var(--thickness);
     border-bottom: var (--thickness) solid black;
     flex: 0 auto;
@@ -158,31 +178,23 @@ div{
 
 }
 
-.c-align.is--horizontal-center{
+.c-align.is--horizontal-center {
     display: flex;
     align-items: center;
     flex: 1;
 }
 
-.a-body-button{
-    background-color: rgb(64, 62, 62);
-    color: whitesmoke;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 4px ;
-    padding-bottom: 4px;
-    display: inline-block;  
-    justify-content: space-between;
-    margin-right: 1;
 
-}   
 
-.next-arrow{
+.next-arrow {
     margin-right: 36px;
-    display: inline-block
+    display: inline-block;
+    filter: imver(1);
+    width: 25px;
+
 }
 
-.slideout_link.secondary{
+.slideout_link.secondary {
     background-color: black;
     color: whitesmoke;
 }
@@ -199,47 +211,49 @@ div{
 }
 */
 
-.scrim.is--hidden{
+.scrim.is--hidden {
     display: none;
 
 }
 
-.scrim{
+.scrim {
     z-index: 2;
     width: 100%;
     height: 100%;
     position: relative;
 
 }
-.c-container_holder{
+.c-container_holder {
     display: flex;
     width: 100%;
+    overflow: hidden;
     
 }
 
-.c-container{
+.c-container {
     display: flex;
     flex-direction: column;
 
 }
 
-.c-container.is--project{
+.c-container.is--project {
     width: 100%;
+    margin-left: 20vw;
 }
-.c-main_body.is--project{
+.c-main_body.is--project {
     padding-right: 16px;
     padding-left: 16px;
     display: flex;
     flex-direction: column;
 }
 
-.c-wrapper{
+.c-wrapper {
     width:100%;
     flex-direction: column;
     display: flex;
 }
 
-.c-flex_vertical.is--m_spacing{
+.c-flex_vertical.is--m_spacing {
     display: flex;
     align-items: stretch;
     flex-direction: column;
@@ -247,33 +261,33 @@ div{
 
 }
 
-.c-scroll_offset{
+.c-scroll_offset {
     margin-top: -52px;
     padding-top: 64px;
 }
 
-.c-margin{
+.c-margin {
     align-self: center;
 }
 
-.c-margin.is--92_top_bottom.is--project{
+.c-margin.is--92_top_bottom.is--project {
     width: 60%;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 0;
 }
 
-.c-image-holder{
+.c-image-holder {
     display: flex;
     align-self: stretch;
 }
 
-.c-image-holder.is--project-hero{
+.c-image-holder.is--project-hero {
     width:45%;
     align-items: center;
 }
 
-.c-image_frame{
+.c-image_frame {
     padding: 16px;
     border: .75px thickness solid black;
     background-color: whitesmoke;
@@ -281,17 +295,18 @@ div{
     flex: none;
 }
 
-image{
+img {
     width: 100%;
 }
 
-.card{
+.card {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
     flex: 1;
     align-content: center;
     padding: 10px;
+    width: 18rem;
 }
 
 
@@ -302,3 +317,14 @@ image{
 
 }
 
+
+
+
+
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
